@@ -9,7 +9,7 @@ const RepoItem = ({ repo }) => {
             
             <h3>
 
-                <a href={repo.html_url}> {repo.name} </a>
+                <a href={repo.html_url} target="_blank"> {repo.name} </a>
 
             </h3>
 

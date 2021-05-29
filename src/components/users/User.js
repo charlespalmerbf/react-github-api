@@ -1,16 +1,15 @@
-import React, { Fragment, useEffect, useContext } from 'react'
+import React, {useEffect, Fragment, useContext } from 'react'
 import Spinner from '../layout/Spinner';
 import Repos from '../repos/Repos';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import GithubContext from '../../context/github/githubContext';
-import githubContext from '../../context/github/githubContext';
 
-const User = ({ getUserRepos, repos, match }) => {
+
+const User = ({ match }) => {
 
     const githubContext = useContext(GithubContext);
 
-    const { getUser, loading, user } = githubContext;
+    const { getUser, loading, user, repos, getUserRepos } = githubContext;
 
     useEffect(() => {
 
@@ -47,11 +46,11 @@ const User = ({ getUserRepos, repos, match }) => {
 
                     </div>
 
-                    <div>
+                    <div className="all-center"> 
 
                         {bio && (<Fragment> <h3>Bio</h3> <p> {bio} </p> </Fragment>)}
 
-                        <a href={html_url} className="btn btn-dark my-1"> Visit Github Profile </a>
+                        <a href={html_url} className="btn btn-dark my-1" target="_blank"> Visit Github Profile </a>
 
                         <ul>
 
@@ -83,13 +82,6 @@ const User = ({ getUserRepos, repos, match }) => {
             </Fragment>
 
         )
-
-}
-
-User.propTypes = {
-    
-    repos: PropTypes.array.isRequired,
-    getUserRepos: PropTypes.func.isRequired,
 
 }
 
