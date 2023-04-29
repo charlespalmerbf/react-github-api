@@ -1,4 +1,4 @@
-#react-github-api
+# react-github-api
 
 Welcome to my GitHub repository for React GitHub API! This is a web application built with React that uses the GitHub API to search for and display user profiles and repositories. Below you will find some information on how to use and navigate this repository.
 
