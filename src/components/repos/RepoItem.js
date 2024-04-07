@@ -13,18 +13,25 @@ const RepoItem = ({ repo }) => {
                     {repo.name}{" "}
                 </a>
             </h3>
-            <Fragment>
-                {" "}
-                <strong> ID: </strong> {repo.id}{" "}
-            </Fragment>
-            <Fragment>
-                {" "}
-                <strong> Created: </strong> {daysAgo(repo.created_at)}{" "}
-            </Fragment>
-            <Fragment>
-                {" "}
-                <strong> Updated: </strong> {daysAgo(repo.updated_at)}{" "}
-            </Fragment>
+            <br />
+            <strong> ID: </strong> {repo.id} <br />
+            <strong> Created: </strong> {daysAgo(repo.created_at)} <br />
+            <strong> Updated: </strong> {daysAgo(repo.updated_at)} <br />
+            <br />
+            <div className="card text-center">
+                <div className="badge badge-primary">
+                    {" "}
+                    Watchers: {repo.watchers}{" "}
+                </div>
+                <div className="badge badge-success">
+                    {" "}
+                    Stars: {repo.stargazers_count}{" "}
+                </div>
+                <div className="badge badge-light">
+                    {" "}
+                    Forks: {repo.forks}{" "}
+                </div>
+            </div>
         </div>
     );
 };
