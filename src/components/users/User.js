@@ -58,7 +58,7 @@ const User = ({ match }) => {
 
                     <h1> {name} </h1>
 
-                    <p> Location: {location} </p>
+                    <p> Location: {location || 'N/A'} </p>
                 </div>
 
                 <div className="all-center">
